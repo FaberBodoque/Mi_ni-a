@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi niña 🌷</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --fondo: #fffaf6;
+    --rosa: #d98e9e;
+    --rosa-claro: #f8e8e9;
+    --texto: #795763;
+    --suave: #997d83;
+    --verde: #8eaa91;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 22px;
+    position: relative;
+    background:
+        radial-gradient(ellipse at 15% 15%, #f8e5e5, transparent 48%),
+        radial-gradient(ellipse at 90% 85%, #eeeade, transparent 45%),
+        var(--fondo);
+}
+
+.top-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--suave);
+    margin-bottom: 28px;
+}
+
+.hero-flower {
+    font-size: 76px;
+    margin-bottom: 23px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-13px); }
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 12vw, 112px);
+    font-weight: 400;
+    line-height: .95;
+    color: var(--texto);
+}
+
+.hero h1 em {
+    color: var(--rosa);
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 490px;
+    margin: 30px auto;
+    color: var(--suave);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--rosa);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 23px #d98e9e35;
+}
+
+.btn:hover {
+    background: #c77c8e;
+    transform: translateY(-3px);
+}
+
+.scroll {
+    position: absolute;
+    bottom: 25px;
+    color: #b69ba1;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+section {
+    padding: 100px 22px;
+}
+
+.container {
+    max-width: 790px;
+    margin: auto;
+}
+
+.label {
+    color: var(--rosa);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: clamp(40px, 7vw, 61px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: var(--suave);
+    text-align: center;
+    font-size: 14px;
+    line-height: 2.1;
+    max-width: 570px;
+    margin: auto;
+}
+
+/* RECUERDOS */
+
+.memories {
+    background: #f9eeee;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+}
+
+.memory-card {
+    background: #fffaf8;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 8px 40px 8px 40px;
+    box-shadow: 0 10px 30px #72545d0b;
+    transition: .3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-5px);
+}
+
+.memory-card:first-child {
+    grid-column: span 2;
+}
+
+.card-icon {
+    font-size: 39px;
+    margin-bottom: 17px;
+}
+
+.memory-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.memory-card p {
+    color: var(--suave);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* CARTA */
+
+.letter-section {
+    background: var(--fondo);
+}
+
+.letter {
+    max-width: 650px;
+    margin: 48px auto 0;
+    background: white;
+    padding: clamp(30px, 7vw, 60px);
+    border: 1px solid #f1e5e3;
+    box-shadow: 0 15px 50px #7957630b;
+    position: relative;
+}
+
+.letter::before {
+    content: "♡";
+    position: absolute;
+    top: -22px;
+    left: calc(50% - 19px);
+    padding: 0 12px;
+    background: var(--fondo);
+    color: var(--rosa);
+    font-size: 30px;
+}
+
+.letter h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.letter p {
+    color: #806c72;
+    font-size: 14px;
+    line-height: 2.15;
+    margin-bottom: 20px;
+}
+
+.signature {
+    color: var(--rosa);
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 35px;
+}
+
+/* CANCION */
+
+.song-section {
+    background: #eeeae3;
+}
+
+.song-card {
+    max-width: 520px;
+    margin: 45px auto 0;
+    background: #fffaf6;
+    padding: 40px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px #7957630c;
+}
+
+.vinyl {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 27px;
+    display: grid;
+    place-items: center;
+    background: repeating-radial-gradient(
+        circle,
+        #51454b 0px,
+        #51454b 2px,
+        #685860 3px,
+        #685860 5px
+    );
+    animation: rotate 12s linear infinite;
+}
+
+.vinyl-center {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: var(--rosa);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+}
+
+@keyframes rotate {
+    to { transform: rotate(360deg); }
+}
+
+.song-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
+    font-weight: 500;
+}
+
+.song-card .artist {
+    color: var(--suave);
+    font-size: 12px;
+    margin: 8px 0 20px;
+}
+
+.song-message {
+    color: var(--suave);
+    font-size: 13px;
+    line-height: 2;
+    max-width: 350px;
+    margin: 0 auto 25px;
+}
+
+.song-note {
+    color: #b28b94;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* CIERRE */
+
+.closing {
+    padding: 110px 22px;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 100%, #f6e0e3, transparent 65%),
+        var(--fondo);
+}
+
+.closing-flower {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 8vw, 68px);
+    font-weight: 400;
+    line-height: 1.12;
+    max-width: 650px;
+    margin: auto;
+}
+
+.closing h2 em {
+    color: var(--rosa);
+}
+
+.closing p {
+    color: var(--suave);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 470px;
+    margin: 25px auto 0;
+}
+
+footer {
+    background: #f5e8e7;
+    text-align: center;
+    padding: 42px 20px;
+    color: #a1838a;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.footer-heart {
+    font-size: 26px;
+    color: var(--rosa);
+    margin-bottom: 12px;
+}
+
+/* PETALOS */
+
+.petal {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    z-index: 10;
+    animation: falling linear forwards;
+}
+
+@keyframes falling {
+    to {
+        transform: translateY(110vh) rotate(500deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 600px) {
+    section {
+        padding: 75px 19px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .memory-card:first-child {
+        grid-column: span 1;
+    }
+
+    .memory-card {
+        padding: 30px 23px;
+    }
+
+    .letter {
+        padding: 35px 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+    <div class="top-label">
+        Una pequeña carta para alguien especial
+    </div>
+
+    <div class="hero-flower">🌷</div>
+
+    <h1>Para ti,<br><em>mi niña</em></h1>
+
+    <p class="hero-description">
+        Hay sentimientos que siguen aquí,
+        recuerdos que guardo con mucho cariño
+        y palabras que todavía quería compartir contigo.
+    </p>
+
+    <a href="#recuerdos" class="btn">
+        Quiero contarte algo ♡
+    </a>
+
+    <div class="scroll">
+        DESLIZA DESPACITO ↓
+    </div>
+
+</header>
+
+
+<!-- RECUERDOS -->
+
+<section class="memories" id="recuerdos">
+
+    <div class="container">
+
+        <div class="label">Un poquito de nosotros</div>
+
+        <h2 class="title">
+            Cositas que guardo en mi corazón
+        </h2>
+
+        <p class="description">
+            Son lindos momentos, son parte de nuestra historia y de todo
+            lo bonito que compartimos
+        </p>
+
+        <div class="cards">
+
+            <div class="memory-card">
+                <div class="card-icon">🐻</div>
+
+                <h3>Mi niña y su osito</h3>
+
+                <p>
+                    Me encanta recordar esas pequeñas cosas
+                    que nos hacen sonreír, nuestras ocurrencias,
+                    nuestras conversaciones,
+                    son recuerdos que tienen un lugar especial
+                    en mí
+                </p>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-icon">🌷</div>
+
+                <h3>Un jardín para ti</h3>
+
+                <p>
+                    Si pudiera regalarte un jardín,
+                    estaría lleno de tulipanes
+                    porque hay detalles que me recuerdan a ti
+                    y que siempre quiero conservar
+                    Y cuando tengamos nuestra casita, será con un jardín,
+                    y ahi habrá tulipanes y flores de todo tipo 💕
+                </p>
+            </div>
+
+            <div class="memory-card">
+                <div class="card-icon">✨</div>
+
+                <h3>Nuestra lista</h3>
+
+                <p>
+                    Recuerdo esa vez que hicimos la lista,
+                    me gusta ver la lista de vez en cuando
+                    porque me recuerda qué es lo que haremos
+                    cuando vaya. Tambien cuando dijimos del picnic
+                    que sea todo rosa, sería algo tan lindo hacerlo contigo.
+                    Asi que, eso seria la primera cosa que haremos cuando vaya, mi amor
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CARTA -->
+
+<section class="letter-section" id="carta">
+
+    <div class="container">
+
+        <div class="label">De mi corazón para ti</div>
+
+        <h2 class="title">
+            Algo que quiero decirte
+        </h2>
+
+        <div class="letter">
+
+            <h3>Mi niña...</h3>
+
+            <p>
+                No sabía exactamente cómo empezar esta carta, tengo tantas cosas que quisiera decirte
+                que a veces siento que las palabras
+                se quedan pequeñas para explicar lo que siento.
+            </p>
+
+            <p>
+                Quiero que sepas que te sigo amando muchísimo,
+                que eres alguien muy especial para mí
+                y que todo lo que hemos vivido tiene
+                un significado enorme en mi corazón.
+            </p>
+
+            <p>
+                He pensado bastante en nosotros,
+                en nuestros momentos bonitos, en nuestras risas,
+                en nuestras conversaciones y también
+                en las cosas que no salieron como esperábamos.
+            </p>
+
+            <p>
+                Sé que no todo ha sido fácil.
+                También sé que hubo momentos en los que
+                pude hacer las cosas mejor y que mis palabras
+                por sí solas no pueden reparar lo que te dolió.
+                Por eso quiero aprender de lo que pasó
+                y demostrar con mis acciones que puedo
+                cuidar mucho mejor lo que sentimos.
+            </p>
+
+            <p>
+                No quiero prometerte un cuento perfecto,
+                porque sé que las relaciones se construyen
+                día a día, quiero
+                escucharte, estar ahí para ti y no descuidar esos pequeños detalles
+                que hacen que alguien se sienta amado.
+            </p>
+
+            <p>
+                Reduerdo nuestras pequeñas locuras,
+                nuestras ocurrencias y hasta esos momentos
+                en los que simplemente compartíamos nuestro día.
+                También imaginar tantas cosas contigo,
+                jugar Habbo, hacernos millonarios
+                y seguir inventándonos nuevos planes.
+            </p>
+
+            <p>
+                Solamente quiero recordarte que todavía
+                tengo muchas ganas de compartir cosas contigo,
+                de volver a reírnos, de crear nuevos recuerdos
+                y de seguir descubriendo todo lo bonito
+                que podemos construir.
+            </p>
+
+            <p>
+                Te amo muchísimo, mi niña
+                y hay algo que deseo que nunca olvides;
+                para mí, sigues siendo alguien muy importante ❤️
+            </p>
+
+            <div class="signature">
+                Con todo mi cariño y amor,<br>
+                tu osito ♡
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NUESTRA CANCION -->
+
+<section class="song-section">
+
+    <div class="container">
+
+        <div class="label">Una canción con historia</div>
+
+        <h2 class="title">
+            Algunas canciones<br>se quedan para siempre
+        </h2>
+
+        <p class="description">
+            Y esta tiene un lugar especial para mí,
+            porque fue la primera canción que te dediqué.
+            Quería que también tuviera un pequeño espacio aquí.
+        </p>
+
+        <div class="song-card">
+
+            <div class="vinyl">
+                <div class="vinyl-center">14</div>
+            </div>
+
+            <h3>Catorce</h3>
+
+            <div class="artist">
+                Sebastián Romero
+            </div>
+
+            <p class="song-message">
+                Nuestra primera canción dedicada.
+                Una melodía que siempre me hará pensar
+                en aquel momento en que quise compartirla contigo.
+            </p>
+
+            <a
+                class="btn"
+                href="https://www.youtube.com/watch?v=4DDi7ptEtoc&list=RD4DDi7ptEtoc&start_radio=1"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ♫ Escuchar nuestra canción
+            </a>
+
+            <div class="song-note">
+                Hay recuerdos que tienen su propia melodía ♡
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CIERRE -->
+
+<section class="closing">
+
+    <div class="closing-flower">💗</div>
+
+    <div class="label">
+        Antes de terminar...
+    </div>
+
+    <h2>
+        Hay historias que<br>
+        <em>merecen ser cuidadas</em>
+    </h2>
+
+    <p>
+        No sé qué nos espera más adelante,
+        pero sé que agradezco haberte encontrado,
+       quiero todavía escribir
+        muchos recuerdos bonitos, sin prisas,
+        con sinceridad y el amor que nos tenemos.
+    </p>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-size:25px;color:#c88998;">
+        ❤️💕❤️ Te amo, mi niña ❤️💕❤️
+    </p>
+
+</section>
+
+
+
+
+<script>
+
+// Pétalos y pequeños corazones flotando
+
+function createPetal() {
+
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.textContent =
+        Math.random() > 0.5 ? "🌸" : "♡";
+
+    petal.style.left =
+        Math.random() * 100 + "vw";
+
+    petal.style.fontSize =
+        (10 + Math.random() * 13) + "px";
+
+    petal.style.animationDuration =
+        (7 + Math.random() * 8) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 16000);
+
+}
+
+setInterval(createPetal, 1800);
+
+</script>
+
+</body>
+</html>
